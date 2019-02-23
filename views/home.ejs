@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <script type="text/javascript">
+            let add = (a,b)=>{
+                return new Promise((resolve,rejects)=>{
+                    setTimeout(()=>{
+                        if(typeof a!= 'number'||typeof b !='number'){
+                            rejects(new Error('Invalid Parameter'));
+                        }
+                        else{
+                            resolve(a+b);
+                        }
+                    },0)
+                })
+            }
+            let sum = add(4,5).
+            then(res=>console.log(res))
+            console.log(sum)
+            setTimeout(()=>console.log(sum),1000)
+        </script>
+
+    </head>
+    <body>
+        <h1>Hello !</h1>
+    </body>
+</html>
